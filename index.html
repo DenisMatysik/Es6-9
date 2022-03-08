@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>TestTask</title>
+</head>
+<body>
+    <input id="input" type="number">
+    <select id="choseCurrency">
+        <option selected value="byn">BYN</option>
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="cny">CNY</option>
+        <option value="rub">RUB</option>
+    </select>
+    <div id="dateNow"></div>
+    <div class="inf">
+        <label>BYN= <span id="byn"></span>Br</label>
+        <label>USD= <span id="usd"></span>$</label>
+        <label>EUR= <span id="eur"></span>€</label>
+        <label>CNY= <span id="cny"></span>&yen</label>
+        <label>RUB= <span id="rub"></span>₽</label>
+    </div>
+    <div class="advancedTask">
+        <button disabled="true" id="show">Показать курс валют</button>
+        <label for="choseDate">Нужно выберать дату</label>
+        <input type="date" id="choseDate" 
+            min="2021-02-22"
+            max="2022-03-08">
+        <div class="showCurrencyRate">
+            <div class="dateInf"></div>
+            <div class="usd"></div>
+            <div class="eur"></div>
+            <div class="cny"></div>
+            <div class="rub"></div>
+        </div>
+    </div>
+</body>
+</html>
