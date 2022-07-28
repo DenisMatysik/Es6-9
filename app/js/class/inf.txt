@@ -1,0 +1,51 @@
+Class - основа оператор, синтаксический сахар над prototype, это шаблон по которому создаются объекты.
+Т.е. class это функция, которая создаёт объекты или конструктор.
+Конструктор - особый метод который создаёться в момент создания класса и сам создаёт свойства, т.е. подготавливает
+объект для дальнейшего использования. В классе может быть только 1 конструктор.
+Внутри конструктора указываютс свойства объекта - это характеристика объекта, указываюшая как объект выглядит. Для создания свойства
+используют ключевое слово this, указываем имя свойства и присваиваем ему значение.
+class Task {
+  constructor(title ="", isCompleted = false) {
+    (this.title = title),
+    (this.isCompleted = isCompleted),
+  }
+let task = new Task("Learn ES6", false);
+let task2 = new Task("Learn React", true).
+
+Добавить методы в класс можно просто :
+class Task {
+  constructor(title = "", isCompleted = false) {
+    (this.title = title),
+    (this._isCompleted = isCompleted),
+  }
+  completed() {
+    this.isCompleted = true;
+  }
+  }
+let task = new Task("Learn ES6", false);
+task.completed();
+console.log(task) // title : "Learn ES6", isCompleted: true
+
+Статические свойтва и методы внутри класса, это методы которые принадлежат самому классу, а не объектам созданным на его основе.
+Статические свойства должны быть указаны сразу после создания класса:
+class Task {
+  constructor(...) {
+   ...,
+   Task.counter +=1;
+  }
+  }
+Task.counter = 0; // - это и есть статическое свойтво
+let task = new Task("Learn ES6", false);
+Создание статического метода производиться внутри класса, с помощью клбчевого сова static:
+class Task {
+  constructor(title= Task.getDefaultTitle()) {
+   this.title = title,
+   Task.counter +=1;
+  }
+  static getDefaultTitle(){
+    return "Title text"
+  }
+  }
+
+Наследование - способность объекта наследовать методы и свойства от других классов (через ключевое слово extends).
+Конструктор наследуется через ключевое слово super.

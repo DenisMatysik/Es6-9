@@ -1,0 +1,7 @@
+Strings
+padStart(number, symbol), padEnd(number, symbol) - дополняет строку до количества элементов в строке number символами symbol.
+padStart - добавляет символы слева, с начала строки.
+padEnd - добавляет символы справа, с конца строки. Если параметр symbol не задан, заполняется пробелами.
+startsWith(symbol, number), endsWith(symbol, number) - параметр number не обязателен; ищет начало строки которое равно
+symbol начиная с number позиции.
+trim - убирает из строки все пробелы.

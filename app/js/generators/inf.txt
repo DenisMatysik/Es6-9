@@ -1,0 +1,10 @@
+Generators - некая функция, которая может оставновиться в некотороый момент и вернуть промежуточный результат.
+function *generate() {
+    console.log("first step");
+    yield;
+    console.log("second step");
+}
+let iterator = generate();
+iterator.next();
+yield - останавливает работу функции и возвращает промежуточное значение - объект со свойствами done и value.
+next - запускает функцию.
