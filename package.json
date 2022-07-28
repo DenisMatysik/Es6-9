@@ -1,8 +1,7 @@
 {
-  "name": "ES6_tutorial",
+  "name": "Some test",
   "version": "1.0.0",
   "description": "",
-  "author": "Yauhen Kavalchuk",
   "scripts": {
     "watch": "babel app/js -d app/dist --plugin transform-object-rest-spread --presets env -w"
   },
